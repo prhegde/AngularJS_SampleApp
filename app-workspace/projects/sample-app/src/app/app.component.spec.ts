@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('span').textContent).toContain('sample-app is running!');
+    expect(compiled.getElementsByTagName('router-outlet')).toBeTruthy();
   });
 });
