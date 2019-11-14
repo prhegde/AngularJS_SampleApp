@@ -1,1 +1,18 @@
-<p>counter works!</p>
+<div class="clr-row">
+    <span>
+        <h2>List of Hosts: {{ hostCount$ | async }}</h2>
+    </span>
+</div>
+<div class="clr-row">
+    <span>
+        <button class="btn btn-icon" (click)="add()">
+            <clr-icon shape="plus-circle"></clr-icon>
+        </button>
+    
+        <button class="btn btn-icon" (click)="remove()">
+            <clr-icon shape="minus-circle"></clr-icon>
+        </button>
+    
+        <button class="btn btn-primary" (click)="reset()">Reset</button>
+    </span>
+</div>

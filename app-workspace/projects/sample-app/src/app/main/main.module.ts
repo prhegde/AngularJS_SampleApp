@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { StoreModule } from "@ngrx/store";
+import { reducers as mainReducer } from './main.feature.reducer';
+
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,7 +17,8 @@ import { CounterComponent } from './counter/counter.component';
   imports: [
     CommonModule,
     MainRoutingModule,
-    ClarityModule
+    ClarityModule,
+    StoreModule.forFeature('app-state', mainReducer)
   ]
 })
 export class MainModule { }
