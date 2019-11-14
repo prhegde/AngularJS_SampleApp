@@ -1,5 +1,7 @@
 <clr-vertical-nav [clrVerticalNavCollapsible]="true">
-    <a clrVerticalNavLink routerLink="./charmander" routerLinkActive="active">
+    <a clrVerticalNavLink routerLink="./charmander"
+       routerLinkActive="active"
+       [routerLink]="['dashboard']">
         <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
         Dashboard
     </a>
