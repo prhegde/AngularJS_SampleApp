@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DashboardService } from "../shared/dashboard.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -10,10 +11,13 @@ export class DashboardComponent implements OnInit {
   dashboard: Object;
   selectedActionText: string;
   source: string;
-  constructor() { }
+  constructor(
+      private dashboardService: DashboardService
+  ) { }
 
   ngOnInit() {
-    this.dashboard = [
+      /*this.dashboardService.getDashboardCards();*/
+    this.dashboard =[
         {
           header: 'Workloads',
             block: 'Workload text',
