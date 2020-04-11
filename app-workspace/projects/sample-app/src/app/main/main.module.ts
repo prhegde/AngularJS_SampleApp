@@ -14,7 +14,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from "@angular/forms";
 import { DashboardService } from "./shared/dashboard.service";
 
-
 @NgModule({
     declarations: [
         MainComponent,

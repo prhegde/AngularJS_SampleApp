@@ -1,32 +1,33 @@
 <input clrInput placeholder="Filter Cards" name="source" [(ngModel)]="source" />
 <div class="clr-row">
     <div
-        *ngFor="let card of dashboard"
-        class="clr-col-lg-4 clr-col-12">
-        <div
-            *ngIf="(source == card.header || source == 'All')"
-            class="card">
-            <div class="card-header">
-                {{ card.header }}
-            </div>
-            <div class="card-block">
-                <div class="card-title">
-                    {{ card.block }}
-                </div>
-                <div class="card-text">
-                </div>
-            </div>
-            <div  class="card-footer">
-                <button
-                    *ngFor="let actionItem of card.actionList"
-                    (click)="selectedAction(actionItem.action)"
-                    class="btn btn-sm btn-link">
-                        {{ actionItem.action }}
-                </button>
-            </div>
+      *ngFor="let card of dashboard"
+      class="clr-col-lg-4 clr-col-12">
+      <div
+        *ngIf="(source == card.header || source == 'Storage')"
+        class="card">
+        <div class="card-header">
+          {{ card.header }}
         </div>
+        <div class="card-block">
+          <div class="card-title">
+            {{ card.block }}
+          </div>
+          <div class="card-text">
+          </div>
+        </div>
+        <div  class="card-footer">
+          <button
+            *ngFor="let actionItem of card.actionList"
+            (click)="selectedAction(actionItem.action)"
+            class="btn btn-sm btn-link">
+            {{ actionItem.action }}
+          </button>
+        </div>
+      </div>
     </div>
 </div>
+
 <div
     class="clr-row"
     *ngIf="selectedActionText">

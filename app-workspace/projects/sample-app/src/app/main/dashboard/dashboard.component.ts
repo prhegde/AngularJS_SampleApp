@@ -19,38 +19,38 @@ export class DashboardComponent implements OnInit {
       /*this.dashboardService.getDashboardCards();*/
     this.dashboard =[
         {
-          header: 'Workloads',
-            block: 'Workload text',
+          header: 'VSAN',
+            block: 'Default Storage',
             actionList: [
                 {
-                  action: 'Create VI'
+                  action: 'Add host with VSAN storage type'
                 }
             ]
         },
         {
-            header: 'Hosts',
-            block: 'Hosts text',
+            header: 'NFS',
+            block: 'External Storage',
             actionList: [
                 {
-                    action: 'Add Host'
+                    action: 'Add host with NFS storage type'
                 }
             ]
         },
         {
-            header: 'vRealize',
-            block: 'vRealize text',
+            header: 'Fibre Channel',
+            block: 'External Storage',
             actionList: [
                 {
-                    action: 'Deploy vROPS'
+                    action: 'Add host with FC storage type'
                 }
             ]
         },
         {
-            header: 'LCM',
-            block: 'LCM text',
+            header: 'VVOL',
+            block: 'External Storage',
             actionList: [
                 {
-                    action: 'Upgrade'
+                    action: 'Add host with VVOL storage type'
                 }
             ]
         }
